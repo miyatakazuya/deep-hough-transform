@@ -1,0 +1,14 @@
+/result
+/result_test
+/results 
+/data/NKL
+/data/SEL_dataset
+/data/training
+/data/frames
+/data/left_rect_
+/__pycache__
+/dht_r50_nkl_d97b97138.pth
+/chamfer_distance/__pycache__
+/model/__pycache__
+/model/_chdt/__pycache__
+/model/backbone/__pycache__

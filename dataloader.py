@@ -52,7 +52,7 @@ class SemanLineDatasetTest(Dataset):
 
     def __init__(self, root_dir, label_file, transform=None, t_transform=None):
         lines = [line.rstrip('\n') for line in open(label_file)]
-        self.image_path = [join(root_dir, i+".jpg") for i in lines]
+        self.image_path = [join(root_dir, i) for i in lines]
         self.transform = transform
         self.t_transform = t_transform
         

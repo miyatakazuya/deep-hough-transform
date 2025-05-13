@@ -1,17 +1,35 @@
+
 DATA:
+    # DIR: "data/training/"
+    # VAL_DIR: "data/training/"
+    # TEST_DIR: "data/NKL"
+    # LABEL_FILE: "data/training/nkl_train.txt"
+    # VAL_LABEL_FILE: "data/training/nkl_val.txt"
+    # TEST_LABEL_FILE: "data/training/nkl_test.txt"
+    
+    # ----------  For left_rect data ------------
+    # DIR: "data/training/"
+    # VAL_DIR: "data/training/"
+    # TEST_DIR: "data/left_rect_"
+    # LABEL_FILE: "data/training/nkl_train.txt"
+    # VAL_LABEL_FILE: "data/training/nkl_val.txt"
+    # TEST_LABEL_FILE: "data/left_rect_list.txt"
+
+    # -------- For Frames Data ---------
     DIR: "data/training/"
     VAL_DIR: "data/training/"
-    TEST_DIR: "data/NKL"
+    TEST_DIR: "data/frames"
     LABEL_FILE: "data/training/nkl_train.txt"
     VAL_LABEL_FILE: "data/training/nkl_val.txt"
-    TEST_LABEL_FILE: "data/training/nkl_test.txt"
+    TEST_LABEL_FILE: "data/frames_list.txt"
+
     # DIR: "data/training/"
     # VAL_DIR: "data/training/"
     # TEST_DIR: "data/training"
     # LABEL_FILE: "data/training/train_1716_100_100.txt"
     # VAL_LABEL_FILE: "data/training/test_1716_100_100.txt"
     # TEST_LABEL_FILE: "data/training/test_1716_100_100.txt"
-    BATCH_SIZE: 8
+    BATCH_SIZE: 10
     WORKERS: 4
 
 OPTIMIZER:
@@ -25,7 +43,8 @@ MODEL:
     NUMANGLE: 100
     NUMRHO: 100
     FIX: True
-    THRESHOLD: 0.01
+    THRESHOLD: 0.05
+    # THRESHOLD: 0.00000005
     EDGE_ALIGN: False
     BACKBONE: resnet50 
     # only support : resnet18, resnet50, resnet101, mobilenetv2, resnext50, res2net50, vgg16
@@ -41,3 +60,5 @@ TRAIN:
 
 MISC:
     TMP: "./result/reproduce"
+    # TMP: "./results/frames_output"
+    # TMP: "./results/left_rect_output"
